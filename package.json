@@ -10,9 +10,11 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "base-64": "^0.1.0",
     "react": "16.11.0",
     "react-native": "0.62.2",
-    "react-native-ble-plx": "^2.0.0"
+    "react-native-ble-plx": "^2.0.0",
+    "react-native-webview": "^10.3.2"
   },
   "devDependencies": {
     "@babel/core": "^7.6.2",
