@@ -1,7 +1,7 @@
 const BOARDCAT_SERVICE_ID = '19b10000-e8f2-537e-4f6c-d104768a1214'
 const BOARDCAT_CHARACTERISTIC_ID = '19b10001-e8f2-537e-4f6c-d104768a1214'
 
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import {
   View,
   Text,
@@ -18,10 +18,28 @@ function pad(n, width, z) {
   return n.length >= width ? n : new Array(width - n.length + 1).join(z) + n;
 }
 
+import StaticServer from 'react-native-static-server';
+import RNFS from 'react-native-fs';
+
 export default function App() {
   const webviewRef = useRef()
   const [connected, setConnected] = useState(false)
   const [connectedDevice, setConnectedDevice] = useState(null)
+  const [url, setUrl] = useState(null)
+
+  useEffect(() => {
+    console.log('starting server')
+
+    // path where files will be served from (index.html here)
+    let path = RNFS.MainBundlePath + '/build';
+
+    let server = new StaticServer(0, path, { keepAlive: true, localOnly: true });
+
+    server.start().then((url) => {
+      console.log("Serving at URL", url);
+      setUrl(url)
+    });
+  })
 
   function stopScanning() {
     manager.stopDeviceScan()
@@ -105,11 +123,12 @@ export default function App() {
     }
   }
 
-  return (
+  console.log('webview url', url)
+  return url ? (
     <WebView
       ref={webviewRef}
-      source={{ uri: 'https://app.boardc.at' }}
+      source={{ uri: url }}//'http://localhost:8080/' }}
       onMessage={(e) => handleMessage(e.nativeEvent.data)}
     />
-  )
+  ) : <View><Text>Loading...</Text></View>
 }

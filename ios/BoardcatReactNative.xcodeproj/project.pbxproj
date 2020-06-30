@@ -18,6 +18,7 @@
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* BoardcatReactNativeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* BoardcatReactNativeTests.m */; };
 		53BBA1EAC2C330C9BFF71635 /* libPods-BoardcatReactNative.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 92603B6C9E2FDF92FD0C9A9F /* libPods-BoardcatReactNative.a */; };
+		765F9A1D24AAE3D10004D426 /* build in Resources */ = {isa = PBXBuildFile; fileRef = 765F9A1C24AAE3D10004D426 /* build */; };
 		76F992B624A8EF7000E5D294 /* EmptyFile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76F992B524A8EF7000E5D294 /* EmptyFile.swift */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +54,7 @@
 		2D02E47B1E0B4A5D006451C7 /* BoardcatReactNative-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "BoardcatReactNative-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* BoardcatReactNative-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "BoardcatReactNative-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		521E4D551E5627ACD1AC8F90 /* Pods-BoardcatReactNative-BoardcatReactNativeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BoardcatReactNative-BoardcatReactNativeTests.debug.xcconfig"; path = "Target Support Files/Pods-BoardcatReactNative-BoardcatReactNativeTests/Pods-BoardcatReactNative-BoardcatReactNativeTests.debug.xcconfig"; sourceTree = "<group>"; };
+		765F9A1C24AAE3D10004D426 /* build */ = {isa = PBXFileReference; lastKnownFileType = folder; name = build; path = ../../boardcat/build; sourceTree = "<group>"; };
 		76F992B424A8EF6F00E5D294 /* BoardcatReactNative-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoardcatReactNative-Bridging-Header.h"; sourceTree = "<group>"; };
 		76F992B524A8EF7000E5D294 /* EmptyFile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyFile.swift; sourceTree = "<group>"; };
 		7FB362653A3F601C3E8DB3AE /* libPods-BoardcatReactNative-BoardcatReactNativeTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BoardcatReactNative-BoardcatReactNativeTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -161,6 +163,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				765F9A1C24AAE3D10004D426 /* build */,
 				76F992B524A8EF7000E5D294 /* EmptyFile.swift */,
 				13B07FAE1A68108700A75B9A /* BoardcatReactNative */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
@@ -325,6 +328,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				765F9A1D24AAE3D10004D426 /* build in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				13B07FBD1A68108700A75B9A /* LaunchScreen.xib in Resources */,
 			);
